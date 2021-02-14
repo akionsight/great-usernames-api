@@ -1,6 +1,5 @@
 from fastapi import FastAPI, status, Response
 import random
-## Imports ## 
 
 
 
@@ -14,16 +13,7 @@ def generate_username():
     username = random.choice(names) + str(random.randint(1, 999)) ## finds a username from the list generated above
     return username
 
-# print(generate_username(names))
-
-
-
-
-# limiter = Limiter(key_func=get_remote_address)
 app = FastAPI()
-# app.state.limiter = limiter
-# app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
-
 
 @app.get('/get_one_username/')
 # @limiter.limit('5/minute')
@@ -52,6 +42,7 @@ def return_a_specific_number_usernames(number: int, response: Response):
         }
 
 
-
-        
-        
+## Project Key
+# a0oapto2_SoLwqcRVQpp78se1yNWwLvaD2zu9tuHA
+# Project ID
+# a0oapto2
