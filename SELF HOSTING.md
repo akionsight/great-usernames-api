@@ -9,56 +9,17 @@ This is a RESTful API to provide the features of the great usernames engine on t
 
 I would recommend this if you want to host it for a larger project as I will not guarentee the uptime because I am on free hosting but it is very easy to deploy
 
-The API is written on the **FastAPI framework** so there are plenty of hosting options out there so go out and choose your favoriate
+The API is written on the **FastAPI framework** along with the **uvicorn ASGI framework** so there are plenty of hosting options out there so go out and choose your favoriate provider
 
-### Hosting on Deta
+To self host you need three files:
+- main.py file (the actual source code)
+- requirements.txt file (the requirements)
+- names.txt (very important for the username generation)
 
-I would recommend <a href="https://deta.sh">Deta</a> as file structure required are already in there. to do so first <a href="https://www.deta.sh/">Create a Deta account</a> 
+These files can be found in the `great-usernames-api` directory. 
 
-Then <a href="https://docs.deta.sh/docs/cli/install">Install the Deta Cli</a> and follow the instrctions to log in to the cli
-
-Then Clone the repo with the following command 
-```
-git clone https://github.com/akionsight/great-usernames-api
-```
-
-Then cd into the `great-usernames-api` directory with the following command
+To host it on a VPS for example, you can install the requirements with the requirement.txt, place the main.py and names.txt in the same dir and start the server with the following commands
 
 ```
-cd great-usernames-api/great-usernames-api
+uvicorn main:app 
 ```
-
-Assuming you want everything in the default project, you can create a new Deta Micro with the following command
-
-```
-deta new --python great_usernames_api
-```
-The cli should respond with something like 
-```
-{
-    "name": "great_usernames_api",
-    "runtime": "python3.7",
-    "endpoint": "https://<path>.deta.dev",
-    "visor": "enabled",
-    "http_auth": "enabled"
-}
-```
-Save this, this is important
-
-Its <strike>Showtime</strike> Deploy time. To deploy execute the deta deploy command
-
-```
-deta deploy
-```
-
-Now go to the endpoint you recieved while creating your micro and you should be good to go
-
-## Hosting on other providers
-
-to host on other providers, first clone the repo
-
-```
-git clone https://github.com/akionsight/great-usernames-api
-```
-
-now cd into the required directr
