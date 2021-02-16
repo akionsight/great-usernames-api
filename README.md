@@ -2,63 +2,63 @@
 
 The great usernames api is a api that provides usernames using a stripted down version of the <a href="https://github.com/akionsight/great-usernames">Great Usernames Engine</a>
 
-This is a RESTful API to provide the features of the great usernames engine on the web, the <a href="https://github.com/akionsight/The-Great-Usernames-Website">Great Usernames website</a>.
+This is a RESTful API to provide the features of the great usernames engine on the web, the <a href="https://github.com/akionsight/The-Great-Usernames-Website">Great Usernames website</a> is a good example of what can be done with this API
 
+## Usage
 
-## Self-Hosting
+The API is hosted on <a href="https://deta.sh">Deta</a> and is made with the **FastAPI framework**
+Using the API is very simple. To get started you can 
+- Follow the small guide below
+- Check the Intercative docs with swagger ui @ https://n8w3zk.deta.dev/docs/
+- Check the interactive docs with redoc @ https://n8w3zk.deta.dev/redoc/
+ 
+### **THE BASE URL OF THE API IS https://n8w3zk.deta.dev**
 
-I would recommend this if you want to host it for a larger project as I will not guarentee the uptime because I am on free hosting but it is very easy to deploy
+#### Get a single username
+To do this you can make a HTTP GET request on https://n8w3zk.deta.dev/get_one_username/ this endpoint. Here is some sample python code to get you started
+```python
 
-The API is written on the **FastAPI framework** so there are plenty of hosting options out there so go out and choose your favoriate
+import requests
 
-### Hosting on Deta
-
-I would recommend <a href="https://deta.sh">Deta</a> as file structure required are already in there. to do so first <a href="https://www.deta.sh/">Create a Deta account</a> 
-
-Then <a href="https://docs.deta.sh/docs/cli/install">Install the Deta Cli</a> and follow the instrctions to log in to the cli
-
-Then Clone the repo with the following command 
-```
-git clone https://github.com/akionsight/great-usernames-api
-```
-
-Then cd into the `great-usernames-api` directory with the following command
+print(requests.get('https://n8w3zk.deta.dev/get_one_username/').json())
 
 ```
-cd great-usernames-api/great-usernames-api
+
+After executing, you may get a response like (the username generated each time will be new so dont worry if the usernames dont match because every username will be unique)
+
+```json
+{'username': 'confocal212'}
 ```
 
-Assuming you want everything in the default project, you can create a new Deta Micro with the following command
+#### Get a number of usernames at the same time
+This request can be made to do get multiple usernames at once. **WARNING: ONLY 20 USERNAMES WILL BE GENERATED AT ONCE, REQUSTING MORE THAN 20 WILL RAISE A HTTP 400 (BAD REQUEST) ERROR **
 
-```
-deta new --python great_usernames_api
-```
-The cli should respond with something like 
-```
-{
-    "name": "great_usernames_api",
-    "runtime": "python3.7",
-    "endpoint": "https://<path>.deta.dev",
-    "visor": "enabled",
-    "http_auth": "enabled"
-}
-```
-Save this, this is important
+To do so you can make a HTTP GET request on the https://n8w3zk.deta.dev/get_a_number_of_usernames/ endpoint along with the number parameter
 
-Its <strike>Showtime</strike> Deploy time. To deploy execute the deta deploy command
+Some sample code to get you started 
+```python
+import requests
 
-```
-deta deploy
+print(requests.get('https://n8w3zk.deta.dev/get_a_number_of_usernames/', {'number': 10}).json())
 ```
 
-Now go to the endpoint you recieved while creating your micro and you should be good to go
+You can change the 'number' in the payload to anything between 1 and 20. After making the request, you may get a response like the following
 
-## Hosting on other providers
-
-to host on other providers, first clone the repo
-
-```
-git clone https://github.com/akionsight/great-usernames-api
+```json
+{'usernames': ['complacent876', 'stationarity935', 'infuse25', 'tutor659', 'Kendall743', 'dutiful596', 'Hinman206', 'Goa473', 'culinary168', 'biscuit662']}
 ```
 
-now cd into the required directr
+This gives you a array of usernames. In this case we get 10 unique usernames because we requested two usernames
+
+## For more info you can 
+
+- Create a issue on this repo (I will be happy to answer your queries)
+- go to the root url https://n8w3zk.deta.dev/ for some general info
+- Go to the `/docs/` and `redoc/` urls listed above
+
+## Self Hosting
+for self hosting, refer <a href="https://github.com/akionsight/great-usernames-api/blob/main/SELF%20HOSTING.md">Self Hosting.md</a>
+
+## Contributing
+PR's are accepted, All PR's must be made on the dev branch. The source code for the API can be found in the <a href="https://github.com/akionsight/great-usernames-api/blob/main/great-usernames-api/main.py">The main.py inside the great usernames api folder</a>
+
