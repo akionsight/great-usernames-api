@@ -31,7 +31,7 @@ After executing, you may get a response like (the username generated each time w
 ```
 
 #### Get a number of usernames at the same time
-This request can be made to do get multiple usernames at once. **WARNING: ONLY 20 USERNAMES WILL BE GENERATED AT ONCE, REQUSTING MORE THAN 20 WILL RAISE A HTTP 400 (BAD REQUEST) ERROR **
+This request can be made to do get multiple usernames at once. **WARNING: ONLY 20 USERNAMES WILL BE GENERATED AT ONCE, REQUSTING MORE THAN 20 WILL RAISE A HTTP 400 (BAD REQUEST) ERROR**
 
 To do so you can make a HTTP GET request on the https://n8w3zk.deta.dev/get_a_number_of_usernames/ endpoint along with the number parameter
 
