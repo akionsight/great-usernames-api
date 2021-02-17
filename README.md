@@ -60,5 +60,5 @@ This gives you a array of usernames. In this case we get 10 unique usernames bec
 for self hosting, refer <a href="https://github.com/akionsight/great-usernames-api/blob/main/SELF%20HOSTING.md">Self Hosting.md</a>
 
 ## Contributing
-PR's are accepted, All PR's must be made on the dev branch. The source code for the API can be found in the <a href="https://github.com/akionsight/great-usernames-api/blob/main/great-usernames-api/main.py">The main.py inside the great usernames api folder</a>
+PR's are accepted, All PR's must be made on the dev branch. The source code for the API can be found in the <a href="https://github.com/akionsight/great-usernames-api/blob/main/great-usernames-api/main.py">The main.py inside the great usernames api folder</a>. To run the app on localhost, see <a href="/RUNNING ON LOCALHOST.md">RUNNING ON LOCALHOST</a>
 
