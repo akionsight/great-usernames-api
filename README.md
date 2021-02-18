@@ -31,7 +31,7 @@ After executing, you may get a response like (the username generated each time w
 ```
 
 #### Get a number of usernames at the same time
-This request can be made to do get multiple usernames at once. **WARNING: ONLY 20 USERNAMES WILL BE GENERATED AT ONCE, REQUSTING MORE THAN 20 WILL RAISE A HTTP 400 (BAD REQUEST) ERROR**
+This request can be made to do get multiple usernames at once. **WARNING: ONLY 20 USERNAMES WILL BE GENERATED AT ONCE, REQUSTING MORE THAN 20 WILL RAISE A HTTP 400 (BAD REQUEST) ERROR** to increase this limit you will need to self host, for that see <a href="#self-hosting">Self Hosting section of this limit</a>
 
 To do so you can make a HTTP GET request on the https://n8w3zk.deta.dev/get_a_number_of_usernames/ endpoint along with the number parameter
 
@@ -57,8 +57,8 @@ This gives you a array of usernames. In this case we get 10 unique usernames bec
 - Go to the `/docs` and `/redoc` urls listed above
 
 ## Self Hosting
-for self hosting, refer <a href="https://github.com/akionsight/great-usernames-api/blob/main/SELF%20HOSTING.md">Self Hosting.md</a>
+for self hosting, refer <a href="https://github.com/akionsight/great-usernames-api/blob/main/SELF%20HOSTING.md">Self Hosting.md</a> To increase the username per request limit, also see the same document
 
 ## Contributing
-PR's are accepted, All PR's must be made on the dev branch. The source code for the API can be found in the <a href="https://github.com/akionsight/great-usernames-api/blob/main/great-usernames-api/main.py">The main.py inside the great usernames api folder</a>. To run the app on localhost, see <a href="/RUNNING ON LOCALHOST.md">Running on localhost</a>
+PR's are accepted. The source code for the API can be found in the <a href="https://github.com/akionsight/great-usernames-api/blob/main/great-usernames-api/main.py">The main.py inside the great usernames api folder</a>. To run the app on localhost, see <a href="/RUNNING ON LOCALHOST.md">Running on localhost</a>
 
