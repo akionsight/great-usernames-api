@@ -54,7 +54,7 @@ This gives you a array of usernames. In this case we get 10 unique usernames bec
 
 - Create a issue on this repo (I will be happy to answer your queries)
 - go to the root url https://n8w3zk.deta.dev/ for some general info
-- Go to the `/docs/` and `redoc/` urls listed above
+- Go to the `/docs` and `/redoc` urls listed above
 
 ## Self Hosting
 for self hosting, refer <a href="https://github.com/akionsight/great-usernames-api/blob/main/SELF%20HOSTING.md">Self Hosting.md</a>
