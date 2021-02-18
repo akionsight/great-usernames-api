@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://github.com/akionsight/great-usernames-api/blob/main/Logo.png">
+</p>
+
 # great-usernames-api
 
 The great usernames api is a api that provides usernames using a stripted down version of the <a href="https://github.com/akionsight/great-usernames">Great Usernames Engine</a>
