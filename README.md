@@ -9,8 +9,8 @@ This is a RESTful API to provide the features of the great usernames engine on t
 The API is hosted on <a href="https://deta.sh">Deta</a> and is made with the **FastAPI framework**
 Using the API is very simple. To get started you can 
 - Follow the small guide below
-- Check the Intercative docs with swagger ui @ https://n8w3zk.deta.dev/docs/
-- Check the interactive docs with redoc @ https://n8w3zk.deta.dev/redoc/
+- Check the Intercative docs with swagger ui @ https://n8w3zk.deta.dev/docs
+- Check the interactive docs with redoc @ https://n8w3zk.deta.dev/redoc
  
 ### **THE BASE URL OF THE API IS https://n8w3zk.deta.dev**
 
@@ -46,7 +46,7 @@ You can change the 'number' in the payload to anything between 1 and 20. After m
 
 ```json
 {'usernames': ['complacent876', 'stationarity935', 'infuse25', 'tutor659', 'Kendall743', 'dutiful596', 'Hinman206', 'Goa473', 'culinary168', 'biscuit662']}
-```
+``` 
 
 This gives you a array of usernames. In this case we get 10 unique usernames because we requested two usernames
 
