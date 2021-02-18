@@ -1,4 +1,5 @@
 from fastapi import FastAPI, status, Response
+import constrains
 import random
 
 
@@ -32,7 +33,7 @@ def return_a_specific_number_usernames(number: int, response: Response):
     """
     get a specific number of usernames
     """
-    if number <= 20 and number > 0:
+    if number <= constrains.MAX_USERNAMES_PER_REQUEST and number > 0:
         usernames = []
 
         for _ in range(number):
@@ -45,7 +46,7 @@ def return_a_specific_number_usernames(number: int, response: Response):
     else:
         response.status_code = status.HTTP_400_BAD_REQUEST
         return {
-            "message": "too many usernames requested, a max of 20 can be requested at a single request"
+            "message": f"too many usernames requested, a max of {constrains.MAX_USERNAMES_PER_REQUEST} can be requested at a single request"
         }
 @app.get('/')
 async def general_info():
@@ -54,6 +55,6 @@ async def general_info():
         "intercative docs with swagger ui (credits to fastapi)": "/docs/",
         "interactive docs with redoc (credits to fastapi)" : "/redoc/",
         "get one username": '/get_one_username/',
-        "get a number of usernames at once (maximum 20 can be obtained at once)": '/get_a_number_of_usernames/',
+        f"get a number of usernames at once (maximum {constrains.MAX_USERNAMES_PER_REQUEST} can be obtained at once)": '/get_a_number_of_usernames/',
         "github repo": "https://github.com/akionsight/great-usernames-api"
     }
