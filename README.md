@@ -44,6 +44,8 @@ Some sample code to get you started
 import requests
 
 print(requests.get('https://n8w3zk.deta.dev/get_a_number_of_usernames/', {'number': 10}).json())
+
+## To test in the browser, go to some url like https://n8w3zk.deta.dev/get_a_number_of_usernames/?number=10
 ```
 
 You can change the 'number' in the payload to anything between 1 and 20. After making the request, you may get a response like the following
