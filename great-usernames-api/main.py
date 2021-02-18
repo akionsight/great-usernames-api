@@ -43,6 +43,12 @@ def return_a_specific_number_usernames(number: int, response: Response):
         return {
             'usernames': usernames
         }
+
+    elif number <= 0 :
+        response.status_code = status.HTTP_400_BAD_REQUEST
+        return {
+            "message": "0 usernames, literally"
+        }
     else:
         response.status_code = status.HTTP_400_BAD_REQUEST
         return {
